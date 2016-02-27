@@ -101,11 +101,32 @@ the week was the most common for garbage removal?
 var dataset = 'https://raw.githubusercontent.com/CPLN690-MUSA610/datasets/master/geojson/philadelphia-garbage-collection-boundaries.geojson';
 
 var myStyle = function(feature) {
-  return {};
+  if (feature.properties.COLLDAY == "MON"){
+    return {fillColor: 'red'};
+  } else if (feature.properties.COLLDAY == "TUE") {
+    return {fillColor: 'blue'};
+  } else if (feature.properties.COLLDAY == "WED") {
+      return {fillColor: 'yellow'};
+  }else if (feature.properties.COLLDAY == "THU") {
+      return {fillColor: 'green'};
+  } else {
+      return {fillColor: 'purple'};
+  }
 };
 
 var eachFeature = function(feature, layer) {
   layer.on('click', function (e) {
+    if(feature.properties.COLLDAY == "MON") {
+      $('.day-of-week').text("Monday");
+    } else if(feature.properties.COLLDAY == "TUE") {
+      $('.day-of-week').text("Tuesday");
+    } else if(feature.properties.COLLDAY == "WED") {
+      $('.day-of-week').text("Wednesday");
+    } else if(feature.properties.COLLDAY == "THU") {
+      $('.day-of-week').text("Thursday");
+    } else {
+      $('.day-of-week').text("Friday");
+    }
     /* =====================
     The following code will run every time a feature on the map is clicked.
     Check out feature.properties to see some useful data about the feature that
@@ -117,7 +138,11 @@ var eachFeature = function(feature, layer) {
 };
 
 var myFilter = function(feature) {
-  return true;
+  if (feature.properties.COLLDAY == " "){
+    return false;
+  } else {
+    return true;
+  }
 };
 
 $(document).ready(function() {

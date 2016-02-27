@@ -28,7 +28,44 @@ p.main {
 }
 
 .legend {
-  position: absolute;
+  position: relative;
+  padding-top: 10px;
+  width: 300px;
   background-color: #fff;
   z-index: 2000;
+}
+
+.legend h1{
+  margin-bottom: 5px;
+}
+
+.item {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.colorbox {
+  width: 20px;
+  height: 20px;
+  border-style:solid;
+}
+
+#red {
+  background-color: red;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#yellow{
+  background-color: yellow;
+}
+
+#green{
+  background-color: green;
+}
+
+#purple {
+  background-color: purple;
 }

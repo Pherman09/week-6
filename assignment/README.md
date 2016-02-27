@@ -39,7 +39,7 @@ write a brief example that shows what the data for one slide might look like.
 Think about how it will be stored and read in Javascript (arrays, objects, etc.).
 
 ## Task 3: Write Function Signatures
-
+ 
 This midterm project might be the largest Javascript application you have
 written so far. An exciting milestone for sure. Since it is a larger
 application, it might be helpful to step back and think about the project before
@@ -82,4 +82,3 @@ Try to give any arguments passed into functions useful names. If no
 arguments are passed in, explain what the function does in comment form.
 Take a look at the example project this week for an idea about how you
 might write your comments.
-
